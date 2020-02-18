@@ -2,9 +2,12 @@ import React from 'react';
 import './App.css';
 import CTA from './CallToAction'
 import Callout from './Callout'
+import {withHOC} from './HigherOrderComponents'
+import {withExtraPropHOC} from './HOCwithExtraProp'
 
 
-function App() {
+function App(props) {
+  console.log('app props', props)
   return (
     <div className="App">
       <CTA>
@@ -40,4 +43,5 @@ function App() {
   );
 }
 
-export default App;
+const PointlessHOC = withExtraPropHOC(App)
+export default PointlessHOC;
