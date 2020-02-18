@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import CTA from './CallToAction'
+import Callout from './Callout'
 
 
 function App() {
@@ -18,6 +19,19 @@ function App() {
           <button>Submit</button>
         </form>
       </CTA>
+
+      <h1>Welcome!</h1>
+      <Callout 
+        header='Do not miss out!'
+        body='Unless you do not suffer from FOMO, you better make sure you fill out the email form below!'
+        />
+
+      <Callout 
+        />
+        
+      <Callout 
+        />
+
     </div>
   );
 }
