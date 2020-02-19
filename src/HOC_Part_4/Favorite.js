@@ -1,23 +1,20 @@
-import React, {Component} from "react"
+import React from "react"
 import {withToggler} from "./withToggler"
-class Favorite extends Component {
-    
-    
-    render() {
+function Favorite(props) {
         return (
             <div>
                 <h3>Click heart to favorite</h3>
                 <h1>
                     <span 
-                        onClick={this.props.toggle}
+                        onClick={props.toggle}
                     >
-                        {this.props.on ? "❤️" : "♡"}
+                        {props.on ? "❤️" : "♡"}
                     </span>
                 </h1>
             </div>
         ) 
     }
-}
+
 
 const FavoriteToggler = withToggler(Favorite)
 export default FavoriteToggler
