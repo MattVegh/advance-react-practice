@@ -4,13 +4,20 @@ import CTA from './CallToAction'
 import Callout from './Callout'
 import { withExtraPropHOC } from './HOCwithExtraProp'
 import { withFavoriteNumber } from './withFavoriteNumber'
+import Menu from './HOC_Part_4/Menu'
+import Favorite from './HOC_Part_4/Favorite'
 
 
 function App(props) {
   console.log('app props', props)
   return (
     <div className="App">
+      <Menu />
+      <hr />
+      <Favorite />
+
       <div>{props.favoriteNumber}</div>
+
       <CTA>
         <h1>This is an important Call To Action</h1>
         <button>Click now or miss out!</button>
@@ -31,7 +38,7 @@ function App(props) {
       </Callout>
 
       <Callout>
-        <img src="https://picsum.photos/id/102/4320/3240" width="100%" />
+        <img src="https://picsum.photos/id/102/4320/3240" width="20%" />
         <figcaption>Just look at those sparkling raspberries!</figcaption>
       </Callout>
 
