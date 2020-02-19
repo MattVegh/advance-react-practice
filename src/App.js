@@ -2,14 +2,15 @@ import React from 'react';
 import './App.css';
 import CTA from './CallToAction'
 import Callout from './Callout'
-import {withHOC} from './HigherOrderComponents'
-import {withExtraPropHOC} from './HOCwithExtraProp'
+import { withExtraPropHOC } from './HOCwithExtraProp'
+import { withFavoriteNumber } from './withFavoriteNumber'
 
 
 function App(props) {
   console.log('app props', props)
   return (
     <div className="App">
+      <div>{props.favoriteNumber}</div>
       <CTA>
         <h1>This is an important Call To Action</h1>
         <button>Click now or miss out!</button>
@@ -39,9 +40,10 @@ function App(props) {
         <input type="email" placeholder="Enter Email" />
         <button>Sign me up!</button>
       </Callout>
+      
     </div>
   );
 }
 
-const PointlessHOC = withExtraPropHOC(App)
-export default PointlessHOC;
+
+export default withFavoriteNumber(App);
