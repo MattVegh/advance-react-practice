@@ -16,5 +16,5 @@ function Favorite(props) {
     }
 
 
-const FavoriteToggler = withToggler(Favorite)
+const FavoriteToggler = withToggler(Favorite, {defaultOnValue: false})
 export default FavoriteToggler
