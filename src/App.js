@@ -2,16 +2,17 @@ import React from 'react';
 import './App.css';
 import CTA from './CallToAction'
 import Callout from './Callout'
-import { withExtraPropHOC } from './HOCwithExtraProp'
 import { withFavoriteNumber } from './withFavoriteNumber'
 import Menu from './HOC_Part_4/Menu'
 import Favorite from './HOC_Part_4/Favorite'
+import RenderPropsExample from './Render_Props/RenderProps'
 
 
 function App(props) {
   console.log('app props', props)
   return (
     <div className="App">
+      <RenderPropsExample name={function() {return 'Yo'}} />
       <Menu />
       <hr />
       <Favorite />
@@ -38,7 +39,7 @@ function App(props) {
       </Callout>
 
       <Callout>
-        <img src="https://picsum.photos/id/102/4320/3240" width="20%" />
+        <img src="https://picsum.photos/id/102/4320/3240" width="20%" alt='raspberries' />
         <figcaption>Just look at those sparkling raspberries!</figcaption>
       </Callout>
 
