@@ -22,6 +22,16 @@ function App(props) {
           return <p>{isDayTime ? 'It is day time' : 'It is not day time'}</p>
           }
         }
+        renderNum={
+          function(num) {
+            return <p>It is {num > 10 ? 'greater than 10' : 'less than 10'}</p>
+          }
+        }
+        renderArr={
+          function(arr) {
+            return arr
+          }
+        }
       />
       <Menu />
       <hr />

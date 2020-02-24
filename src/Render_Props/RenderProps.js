@@ -6,6 +6,8 @@ export default function RenderPropsExample(props) {
         <div>
             {props.render("Snea Snake")}
             {props.renderTwo(false)}
+            {props.renderNum(11)}
+            {props.renderArr(['one', 'two', 'threefourfive'])}
         </div>
     )
 }
