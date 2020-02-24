@@ -12,7 +12,7 @@ function App(props) {
   console.log('app props', props)
   return (
     <div className="App">
-      <RenderPropsExample name={function() {return 'Yo'}} />
+      <RenderPropsExample name={function() {return <h1>Yo</h1>}} />
       <Menu />
       <hr />
       <Favorite />
