@@ -12,7 +12,17 @@ function App(props) {
   console.log('app props', props)
   return (
     <div className="App">
-      <RenderPropsExample name={function() {return <h1>Yo</h1>}} />
+      <RenderPropsExample render={
+        function (name) {
+          return <h1>Yo, {name}</h1>
+        }
+      }
+        renderTwo={
+          function(isDayTime) {
+          return <p>{isDayTime ? 'It is day time' : 'It is not day time'}</p>
+          }
+        }
+      />
       <Menu />
       <hr />
       <Favorite />
@@ -48,7 +58,7 @@ function App(props) {
         <input type="email" placeholder="Enter Email" />
         <button>Sign me up!</button>
       </Callout>
-      
+
     </div>
   );
 }
