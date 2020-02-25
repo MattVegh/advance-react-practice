@@ -24,7 +24,7 @@ function App(props) {
         }
         renderNum={
           function(num) {
-            return <p>It is {num > 10 ? 'greater than 10' : 'less than 10'}</p>
+            return <p>It is {num >= 10 ? 'greater than or equal to 10' : 'less than 10'}</p>
           }
         }
         renderArr={
