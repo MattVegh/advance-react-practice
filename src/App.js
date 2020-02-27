@@ -33,7 +33,7 @@ function App(props) {
           }
         }
       />
-      <Menu />
+      
       <hr />
       <Favorite />
 
