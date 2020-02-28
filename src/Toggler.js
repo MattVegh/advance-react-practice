@@ -17,7 +17,7 @@ class Toggler extends Component {
     render() {
         return (
             <div>
-              {this.props.render()}  
+              {this.props.render()}
             </div>
         )
     }
