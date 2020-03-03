@@ -68,7 +68,6 @@ function App(props) {
         <input type="email" placeholder="Enter Email" />
         <button>Sign me up!</button>
       </Callout>
-
     </div>
   );
 }
