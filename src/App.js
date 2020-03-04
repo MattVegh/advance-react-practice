@@ -36,6 +36,7 @@ function App(props) {
       
       <hr />
       <Favorite />
+      <Menu />
 
       <div>{props.favoriteNumber}</div>
 
