@@ -6,6 +6,10 @@ class Toggler extends Component {
         on: this.props.defaultOnValue
     }
 
+    static defaultProps = {
+        defaultOnValue: false
+    }
+
     toggle = () => {
         this.setState(prevState => {
             return {
@@ -22,4 +26,6 @@ class Toggler extends Component {
         )
     }
 }
+
+
 export default Toggler
