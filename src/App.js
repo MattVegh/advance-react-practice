@@ -5,6 +5,7 @@ import Callout from './Callout'
 import { withFavoriteNumber } from './withFavoriteNumber'
 import Menu from './HOC_Part_4/Menu'
 import Favorite from './HOC_Part_4/Favorite'
+import DataFetcher from './HOC_Part_4/DataFetcher'
 import RenderPropsExample from './Render_Props/RenderProps'
 
 
@@ -35,6 +36,15 @@ function App(props) {
       />
       
       <hr />
+      <DataFetcher url="https://swapi.co/api/people/1">
+          {({data, loading}) => {
+            return (
+              loading ?
+              <h1>Loading...</h1> :
+              <p>{JSON.stringify(data)}</p>
+            )
+          }}
+      </DataFetcher>
       <Favorite />
       <Menu />
 
