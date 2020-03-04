@@ -21,7 +21,10 @@ class Toggler extends Component {
     render() {
         return (
             <div>
-              {this.props.render(this.state.on, this.toggle)}
+              {this.props.render({
+                  on: this.state.on, 
+                  toggle: this.toggle
+              })}
             </div>
         )
     }
