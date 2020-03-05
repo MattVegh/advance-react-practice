@@ -11,3 +11,9 @@ shouldComponentUpdate(nextProps, nextState)
     Recieves the upcoming props and state so you can compare them against current props and state
     return true for "yes", false for "no"
     Don't do deep equality checks in shouldComponentUpdate()
+
+React.PureComponent
+    Alternative to React.component
+    Automatically implements shouldComponentUpdate() for shallow props and state comparisons
+    Disallows using shouldComponentUpdate() manually
+    Skips rendering all children in the tree automatically, so they must be "pure" as well
