@@ -5,7 +5,7 @@ whether those components have changed or not.
 
 shouldComponentUpdate(), React.PureComponent, and React.memo() are tools to help this this problem.
 
-shouldComponentUpdate()
+shouldComponentUpdate(nextProps, nextState)
     Lifecycle method on class components
     Allows you to determine if a component should update or not
     Recieves the upcoming props and state so you can compare them against current props and state
