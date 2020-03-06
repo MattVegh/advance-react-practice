@@ -19,7 +19,7 @@ React.PureComponent
     Skips rendering all children in the tree automatically, so they must be "pure" as well
     Generally preferred over shouldComponentUpdate()
 
-React.memo()
+export default React.memo(Component)
     Higher-order component built by React (release in v16.6)
     Pretty much the same as PureComponent, but for functional components
     Only compares prevProps and nextProps (no state checking)
@@ -27,4 +27,3 @@ React.memo()
         this function is kind of like shouldComponentUpdate(), except it should return true if the props are equal,
         and false if they aren't. This is effectively the opposite approach of shouldComponentUpdate(),
         which returns true if the component should re-render (props are different)
-        
