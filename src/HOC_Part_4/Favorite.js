@@ -2,7 +2,7 @@ import React from "react"
 import useToggler from "../useToggler"
 
 function Favorite() {
-    const { isToggledOn, toggle } = useToggler()
+    const [ on, toggle ] = useToggler()
     return (
         
                 <div>
@@ -11,7 +11,7 @@ function Favorite() {
                         <span 
                             onClick={toggle}
                         >
-                            {isToggledOn ? "❤️" : "♡"}
+                            {on ? "❤️" : "♡"}
                         </span>
                     </h1>
                 </div>

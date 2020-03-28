@@ -7,7 +7,7 @@ function useToggler() {
         setIsToggledOn(prev => !prev)
     }
 
-    return { isToggledOn, toggle }
+    return [ isToggledOn, toggle ]
 }
 
 export default useToggler
