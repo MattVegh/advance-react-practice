@@ -4,7 +4,7 @@ function useToggler() {
     const [ isToggledOn, setIsToggledOn ] = useState(false)
 
     function toggle() {
-        setIsToggledOn(!isToggledOn)
+        setIsToggledOn(prev => !prev)
     }
 
     return { isToggledOn, toggle }
