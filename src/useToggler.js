@@ -1,7 +1,7 @@
 import {useState} from "react"
 
-function useToggler() {
-    const [ isToggledOn, setIsToggledOn ] = useState(false)
+function useToggler(defaultOnValue) {
+    const [ isToggledOn, setIsToggledOn ] = useState(defaultOnValue)
 
     function toggle() {
         setIsToggledOn(prev => !prev)

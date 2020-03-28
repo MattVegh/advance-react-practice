@@ -3,7 +3,7 @@ import useToggler from '../useToggler'
 
 function Menu() {
 
-    const [ isShowing, toggle ] = useToggler()
+    const [ isShowing, toggle ] = useToggler(true)
     return (
         
             <div>

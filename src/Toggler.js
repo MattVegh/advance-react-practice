@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+//unused since adding custom hook
 
 class Toggler extends Component {
     state = {
