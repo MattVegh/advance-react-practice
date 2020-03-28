@@ -1,12 +1,14 @@
 import React from "react"
-import Toggler from '../Toggler'
+import useToggler from '../useToggler'
 
 function Menu() {
+
+    const [ isShowing, toggle ] = useToggler()
     return (
-        <Toggler defaultOnValue={true} render={({on, toggle}) => (
+        
             <div>
-                <button onClick={toggle}>{on ? "Hide" : "Show"} Menu </button>
-                <nav style={{ display: on ? "block" : "none" }}>
+                <button onClick={toggle}>{isShowing ? "Hide" : "Show"} Menu </button>
+                <nav style={{ display: isShowing ? "block" : "none" }}>
                     <h6>Signed in as Coder123</h6>
                     <p>Your Profile</p>
                     <p>Your Repositories</p>
@@ -14,8 +16,6 @@ function Menu() {
                     <p>Your Gists</p>
                 </nav>
             </div>
-        )}
-        />
 
     )
 }
